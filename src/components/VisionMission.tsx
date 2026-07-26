@@ -40,7 +40,7 @@ export default function VisionMission() {
   ];
 
   return (
-    <div className="py-16 bg-[#F8FAFC] space-y-16" id="visimisi-container">
+    <div className="pt-[calc(var(--navbar-height)+3rem)] pb-16 bg-[#F8FAFC] space-y-16" id="visimisi-container">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
 
         {/* Section Header */}

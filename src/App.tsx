@@ -63,7 +63,7 @@ export default function App() {
       {/* Main Content Area */}
       <main className="flex-grow">
         {activeTab === "beranda" && (
-          <div className="space-y-16 pb-20 animate-fadeIn" id="beranda-container">
+          <div className="space-y-16 pb-20" id="beranda-container">
             {/* Hero banner */}
             <Hero setActiveTab={setActiveTab} />
 

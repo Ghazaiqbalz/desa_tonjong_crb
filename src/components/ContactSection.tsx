@@ -14,7 +14,7 @@ const fadeInUp = (delay = 0) => ({
 
 export default function ContactSection() {
   return (
-    <div className="py-16 bg-[#F8FAFC] space-y-12" id="contact-section">
+    <div className="pt-[calc(var(--navbar-height)+3rem)] pb-16 bg-[#F8FAFC] space-y-12" id="contact-section">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
 
         {/* Section Header */}

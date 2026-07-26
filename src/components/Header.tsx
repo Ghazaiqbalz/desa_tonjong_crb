@@ -137,11 +137,11 @@ export default function Header({ activeTab, setActiveTab }: HeaderProps) {
             <button
               onClick={() => setIsOpen(!isOpen)}
               id="mobile-menu-btn"
-              className="inline-flex items-center justify-center rounded-full p-2 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-emerald-900/40 focus:outline-none lg:hidden"
+              className="inline-flex items-center justify-center rounded-full p-2.5 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-emerald-900/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0F766E] lg:hidden"
               aria-expanded={isOpen}
             >
               <span className="sr-only">Buka menu navigasi</span>
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
 

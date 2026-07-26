@@ -9,7 +9,7 @@ interface HeroProps {
 
 export default function Hero({ setActiveTab }: HeroProps) {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-[#F8FAFC]">
+    <section className="relative min-h-[90vh] flex items-center justify-center pt-[calc(var(--navbar-height)+3rem)] pb-16 overflow-hidden bg-[#F8FAFC]">
       {/* Sugarcane Background Image — full bleed, proportional, premium */}
       <div className="absolute inset-0 z-0">
         {/* Base image: richly visible, crisp */}

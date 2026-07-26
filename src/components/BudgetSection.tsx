@@ -34,7 +34,7 @@ export default function BudgetSection() {
   };
 
   return (
-    <div className="py-16 bg-[#F8FAFC] space-y-12" id="budget-section-container">
+    <div className="pt-[calc(var(--navbar-height)+3rem)] pb-16 bg-[#F8FAFC] space-y-12" id="budget-section-container">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Section Header */}

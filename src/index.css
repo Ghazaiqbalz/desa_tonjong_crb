@@ -23,19 +23,52 @@
     --bg-light: #F8FAFC;
     --text-main: #0F172A;
     --text-sub: #64748B;
+    
+    /* Responsive Navbar Height */
+    --navbar-height: 72px; /* Default for mobile/small */
+  }
+
+  @media (min-width: 640px) {
+    :root {
+      --navbar-height: 80px; /* tablet */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --navbar-height: 88px; /* desktop */
+    }
   }
 
   html {
     scroll-behavior: smooth;
     font-family: var(--font-sans);
-    color: #0F172A;
-    background-color: #F8FAFC;
+    color: var(--text-main);
+    background-color: var(--bg-light);
+    scroll-padding-top: calc(var(--navbar-height) + 16px);
+    width: 100%;
+    max-width: 100vw;
   }
 
   body {
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    max-width: 100vw;
+    /* We avoid overflow-x: hidden here and fix root causes in elements instead */
+  }
+
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 
   /* Improve mobile tap targets */
