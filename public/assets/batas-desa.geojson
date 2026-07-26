@@ -1,0 +1,32 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Batas Wilayah Desa Tonjong",
+        "description": "Batas Administratif Desa Tonjong, Kecamatan Tonjong, Kabupaten Brebes",
+        "stroke": "#059669",
+        "stroke-width": 3,
+        "fill": "#10b981",
+        "fill-opacity": 0.15
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [108.9920, -7.2140],
+            [108.9950, -7.2100],
+            [109.0020, -7.2080],
+            [109.0100, -7.2100],
+            [109.0150, -7.2150],
+            [109.0120, -7.2200],
+            [109.0050, -7.2230],
+            [108.9980, -7.2210],
+            [108.9920, -7.2140]
+          ]
+        ]
+      }
+    }
+  ]
+}

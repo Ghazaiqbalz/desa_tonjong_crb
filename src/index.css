@@ -1,0 +1,296 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Georgia", "Times New Roman", serif;
+
+  --color-brand-primary: #0F766E;
+  --color-brand-dark: #042F2E;
+  --color-brand-accent: #10B981;
+  --color-brand-bg: #F8FAFC;
+  --color-brand-surface: rgba(255, 255, 255, 0.65);
+  --color-brand-text: #0F172A;
+  --color-brand-secondary: #64748B;
+  --color-brand-border: rgba(255, 255, 255, 0.15);
+}
+
+@layer base {
+  :root {
+    --primary: #0F766E;
+    --dark: #042F2E;
+    --accent: #10B981;
+    --bg-light: #F8FAFC;
+    --text-main: #0F172A;
+    --text-sub: #64748B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: #0F172A;
+    background-color: #F8FAFC;
+  }
+
+  body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Improve mobile tap targets */
+  button, a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Better focus outline */
+  :focus-visible {
+    outline: 2px solid #0F766E;
+    outline-offset: 3px;
+  }
+
+  /* Responsive images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ================================================================
+   GLASSMORPHISM DESIGN TOKENS
+================================================================ */
+
+.apple-glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 40px -10px rgba(15, 23, 42, 0.05);
+}
+
+.apple-glass-dark {
+  background: rgba(4, 47, 46, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  box-shadow: 0 20px 50px -15px rgba(4, 47, 46, 0.4);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px -12px rgba(15, 118, 110, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 9999px;
+}
+
+/* ================================================================
+   GRADIENT TEXT UTILITIES
+================================================================ */
+
+.apple-gradient-text {
+  background: linear-gradient(135deg, #0F766E 0%, #042F2E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.apple-gradient-accent {
+  background: linear-gradient(135deg, #10B981 0%, #0F766E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.apple-gradient-dark-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #A7F3D0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ================================================================
+   KEYFRAME ANIMATIONS
+================================================================ */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%       { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ================================================================
+   ANIMATION UTILITY CLASSES
+================================================================ */
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pulseGlow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-gradientShift {
+  animation: gradientShift 6s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* ================================================================
+   SHIMMER LOADING
+================================================================ */
+
+.shimmer-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-wrapper::after {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.4) 20%,
+    rgba(255, 255, 255, 0.6) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 2s infinite;
+  content: '';
+}
+
+/* ================================================================
+   LEAFLET MAP CUSTOMIZATION
+================================================================ */
+
+.leaflet-container {
+  font-family: var(--font-sans) !important;
+  z-index: 10 !important;
+  border-radius: 20px;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 16px !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.custom-leaflet-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* ================================================================
+   RESPONSIVE HELPERS
+================================================================ */
+
+/* Prevent content overflow on very small screens */
+@media (max-width: 375px) {
+  .mx-auto.max-w-7xl {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+  h1 { font-size: 2rem !important; line-height: 1.2 !important; }
+  h2 { font-size: 1.5rem !important; }
+  h3 { font-size: 1.25rem !important; }
+}
+
+/* Table horizontal scroll on mobile */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent table from breaking layout */
+table {
+  min-width: 100%;
+}
+
+/* Better scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* ================================================================
+   PREFERS-REDUCED-MOTION
+================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
