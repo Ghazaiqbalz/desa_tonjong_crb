@@ -1,0 +1,6 @@
+{
+  "name": "Portal & PPID Desa Tonjong",
+  "description": "Portal Resmi & Pejabat Pengelola Informasi dan Dokumentasi (PPID) Desa Tonjong. Transparansi anggaran, peta administrasi interaktif, dan layanan permohonan informasi publik.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
