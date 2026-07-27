@@ -1,6 +1,6 @@
 import { demographicStats, livelihoodStats, ageGroupStats, villageOfficials, kuwuHistory, agriculturalCommodities, socialInfrastructure } from "../data/demographics";
 import { Users, Home, Map, User, ShieldCheck, GraduationCap, MapPin, ExternalLink, School, CheckCircle2, Award, Shield, FileText, Briefcase, Sprout, Building2, Crown, CalendarDays } from "lucide-react";
-import balaiDesaImg from "../assets/images/balai_desa_tonjong_1784730799388.jpg";
+import balaiDesaImg from "../assets/images/tonjong.jpeg";
 import GlassCard from "./ui/GlassCard";
 import SectionHeader from "./ui/SectionHeader";
 import Badge from "./ui/Badge";
